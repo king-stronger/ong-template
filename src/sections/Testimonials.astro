@@ -1,0 +1,76 @@
+---
+import Testimonial from "../components/Testimonial.astro"
+
+const testimonials = [
+    {
+        name: "Aïcha Sow",
+        jobTitle: "Bénéficiaire, programme éducation",
+        title: "Mes enfants peuvent enfin aller à l’école",
+        description:
+        "Avant, mes enfants restaient à la maison faute d’école proche. Grâce au programme, ils ont maintenant accès à une éducation de qualité dans notre village."
+    },
+    {
+        name: "Kofi Mensah",
+        jobTitle: "Bénéficiaire, accès à l’eau",
+        title: "Nous avons enfin de l’eau potable",
+        description:
+        "Nous marchions plusieurs kilomètres chaque jour pour de l’eau. Aujourd’hui, le puits construit dans notre village a changé notre quotidien."
+    },
+    {
+        name: "Fatou Niane",
+        jobTitle: "Enseignante locale",
+        title: "Les conditions d’apprentissage se sont améliorées",
+        description:
+        "Les nouvelles salles de classe et le matériel scolaire ont permis aux élèves d’apprendre dans de meilleures conditions et avec plus de motivation."
+    },
+    {
+        name: "Moussa Traoré",
+        jobTitle: "Chef de village",
+        title: "Un impact réel sur toute la communauté",
+        description:
+        "L’ONG a apporté des solutions concrètes à nos besoins essentiels. L’accès à la santé et à l’eau a transformé notre village."
+    },
+    {
+        name: "Aminata Diallo",
+        jobTitle: "Bénévole terrain",
+        title: "Une expérience humaine inoubliable",
+        description:
+        "Participer aux missions sur le terrain m’a permis de voir l’impact direct des actions. C’est une expérience qui change une vie."
+    },
+    {
+        name: "Samuel Okoro",
+        jobTitle: "Responsable santé communautaire",
+        title: "Un meilleur accès aux soins",
+        description:
+        "Grâce aux cliniques mobiles, nous pouvons désormais soigner plus de patients dans les zones rurales isolées."
+    },
+    {
+        name: "Adama Coulibaly",
+        jobTitle: "Parent d’élève",
+        title: "Une vraie opportunité pour nos enfants",
+        description:
+        "L’éducation offerte par le programme donne une chance réelle à nos enfants d’avoir un avenir meilleur."
+    },
+    {
+        name: "Grace Ndlovu",
+        jobTitle: "Partenaire local",
+        title: "Une collaboration efficace et durable",
+        description:
+        "Travailler avec l’ONG nous a permis de mettre en place des projets durables qui répondent réellement aux besoins des communautés."
+    }
+]
+---
+
+<section class="testimonials-section">
+    <div class="wrapper">
+        <h2 class="text-xl">
+            Testimonials
+        </h2>
+        <div class="menu">
+            {testimonials.map((testimonial) => (
+                <Testimonial {testimonial}/>
+            ))}
+        </div>
+        <a href="/contact" class="btn btn-primary">Free Conversion Audit</a>
+    </div>
+</section>
