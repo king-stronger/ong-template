@@ -1,15 +1,105 @@
+---
+import { Icon } from "astro-icon/components"
+---
+
 <section class="hero">
     <div class="wrapper">
-        <div class="hero-content">
-            <h1>Changer des vies, un projet à la fois</h1>
-            <p>Nous travaillons pour offrir éducation, santé et dignité aux communautés vulnérables.</p>
+        <div class="hero-content flow">
+            <h2 class="text-xxl">Changer des vies, un projet à la fois</h2>
+            <p class="text">
+                Nous travaillons pour offrir éducation, santé et dignité aux communautés vulnérables
+            </p>
     
             <div class="hero-actions">
-                <button>Faire un don</button>
-                <button>Devenir partenaire</button>
+                <a href="#" class="btn btn-primary">Faire un don</a>
+                <a href="#" class="btn btn-tertiary">
+                    <Icon name="ri:group-fill" />
+                    <span>Devenir partenaire</span>
+                </a>
             </div>
         </div>
-
-        <img src="hero-image.jpg" alt="Enfants dans une école communautaire">
     </div>
 </section>
+
+<div class="impacts wrapper">        
+    <ul class="impact-list">
+        <li class="text-center">
+            <h3 class="text-xl">+15 000</h3>
+            <p class="text-sm">Bénéficiaires aidés</p>
+        </li>
+
+        <li class="text-center">
+            <h3 class="text-xl">120</h3>
+            <p class="text-sm">Puits construits</p>
+        </li>
+
+        <li class="text-center">
+            <h3 class="text-xl">80</h3>
+            <p class="text-sm">Écoles soutenues</p>
+        </li>
+
+        <li class="text-center">
+            <h3 class="text-xl">35</h3>
+            <p class="text-sm">Communautés accompagnées</p>
+        </li>
+    </ul>
+</div>
+
+<style>
+    .hero {
+        @container (width < 600px){
+            aspect-ratio: 4 / 5;
+            background: url("/bg/hero5.png");
+            border-image: fill 1 linear-gradient(hsl(0 0 0 / .6), hsl(0 0 0 / .6));
+        }
+
+        @container (width > 600px){
+            background: url("/bg/hero3.png");
+            border-image: fill 1 linear-gradient(hsl(0 0 0 / .5), hsl(0 0 0 / .5));
+        }
+        
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .wrapper {
+        display: grid;
+        gap: var(--gap-3);
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    }
+
+    .hero-content {
+        width: min(100%, 500px);
+
+        h2 {
+            color: var(--clr-white);
+        }
+
+        p {
+            color: var(--gray-50);
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: var(--gap-0);
+        }
+    }
+
+    .impacts {
+        padding-top: var(--gap-3);
+    }
+
+    .impact-list {
+        display: grid;
+        gap: var(--gap-5);
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 125px), 1fr));
+    
+        li {
+            display: grid;
+            gap: var(--gap-1);
+        }
+    }
+</style>

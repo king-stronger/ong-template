@@ -1,25 +1,47 @@
 <section class="help">
-    <div class="wrapper">
-        <h2>Comment aider?</h2>
+    <div class="wrapper flow-lg">
+        <h2 class="text-xl text-center">Comment aider?</h2>
 
-        <ul class="help">
+        <ul class="help-list">
             <li>
-                <span>💰</span>
-                <h3>Faire un don</h3>
-                <p>Soutenez directement nos actions.</p>
+                <img src="/icons/donation.png" alt="">
+                <h3 class="text">Faire un don</h3>
+                <p class="text-sm">Soutenez directement nos actions.</p>
             </li>
 
             <li>
-                <span>🤝</span>
-                <h3>Devenir bénévole</h3>
-                <p>Participez sur le terrain ou à distance.</p>
+                <img src="/icons/volunteer.png" alt="">
+                <h3 class="text">Devenir bénévole</h3>
+                <p class="text-sm">Participez sur le terrain ou à distance.</p>
             </li>
 
             <li>
-                <span>🏢</span>
-                <h3>Devenir partenaire</h3>
-                <p>Collaborez avec nous sur des projets.</p>
+                <img src="/icons/partnership.png" alt="">
+                <h3 class="text">Devenir partenaire</h3>
+                <p class="text-sm">Collaborez avec nous sur des projets.</p>
             </li>
         </ul>
     </div>
 </section>
+
+<style>
+    section {
+        background-color: var(--primary-0);
+    }
+
+    .help-list {
+        display: grid;
+        gap: var(--gap-3);
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+        
+        img {
+            width: 48px;
+            aspect-ratio: 1;
+        }
+        
+        li {
+            display: grid;
+            gap: var(--gap-1);
+        }
+    }
+</style>

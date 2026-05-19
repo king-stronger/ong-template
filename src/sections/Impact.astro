@@ -1,27 +1,44 @@
 <section class="impact">
-    <div class="wrapper">
-        <h2>Notre impact</h2>
+    <div class="wrapper flow-lg">
+        <h2 class="text-xl text-center">Notre impact</h2>
 
-        <div class="impact-grid">
-            <div>
-                <h3>+15 000</h3>
-                <p>Bénéficiaires aidés</p>
-            </div>
+        <ul class="impact-list">
+            <li class="text-center">
+                <h3 class="text-lg">+15 000</h3>
+                <p class="text-sm">Bénéficiaires aidés</p>
+            </li>
 
-            <div>
-                <h3>120</h3>
-                <p>Puits construits</p>
-            </div>
+            <li class="text-center">
+                <h3 class="text-lg">120</h3>
+                <p class="text-sm">Puits construits</p>
+            </li>
 
-            <div>
-                <h3>80</h3>
-                <p>Écoles soutenues</p>
-            </div>
+            <li class="text-center">
+                <h3 class="text-lg">80</h3>
+                <p class="text-sm">Écoles soutenues</p>
+            </li>
 
-            <div>
-                <h3>35</h3>
-                <p>Communautés accompagnées</p>
-            </div>
-        </div>
+            <li class="text-center">
+                <h3 class="text-lg">35</h3>
+                <p class="text-sm">Communautés accompagnées</p>
+            </li>
+        </ul>
     </div>
 </section>
+
+<style>
+    section {
+        background-color: var(--primary-0);
+    }
+
+    .impact-list {
+        display: grid;
+        gap: var(--gap-3);
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+    
+        li {
+            display: grid;
+            gap: var(--gap-1);
+        }
+    }
+</style>

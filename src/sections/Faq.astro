@@ -1,20 +1,31 @@
 <section class="faq">
-    <div class="wrapper">
-        <h2>Questions fréquentes</h2>
+    <div class="wrapper flow-lg">
+        <h2 class="text-xl text-center">Questions fréquentes</h2>
 
-        <details>
-            <summary>Comment sont utilisés les dons ?</summary>
-            <p>Ils financent directement les projets sur le terrain.</p>
-        </details>
-
-        <details>
-            <summary>Puis-je devenir bénévole ?</summary>
-            <p>Oui, nous recrutons régulièrement des bénévoles.</p>
-        </details>
-
-        <details>
-            <summary>L’ONG est-elle transparente ?</summary>
-            <p>Oui, nous publions des rapports annuels détaillés.</p>
-        </details>
+        <div class="faq-list">
+            <details>
+                <summary>Comment sont utilisés les dons ?</summary>
+                <p>Ils financent directement les projets sur le terrain.</p>
+            </details>
+    
+            <details>
+                <summary>Puis-je devenir bénévole ?</summary>
+                <p>Oui, nous recrutons régulièrement des bénévoles.</p>
+            </details>
+    
+            <details>
+                <summary>L’ONG est-elle transparente ?</summary>
+                <p>Oui, nous publions des rapports annuels détaillés.</p>
+            </details>
+        </div>
     </div>
 </section>
+
+<style>
+    .faq-list {
+        display: grid;
+        gap: var(--gap-1);
+        place-content: center;
+        grid-template-columns: min(100%, 600px);
+    }
+</style>

@@ -62,15 +62,22 @@ const testimonials = [
 ---
 
 <section class="testimonials-section">
-    <div class="wrapper">
-        <h2 class="text-xl">
-            Testimonials
-        </h2>
-        <div class="menu">
+    <div class="wrapper flow-lg">
+        <h2 class="text-xl text-center">Testimonials</h2>
+
+        <div class="testimonial-list">
             {testimonials.map((testimonial) => (
                 <Testimonial {testimonial}/>
             ))}
         </div>
-        <a href="/contact" class="btn btn-primary">Free Conversion Audit</a>
     </div>
 </section>
+
+
+<style>
+    .testimonial-list {
+        display: grid;
+        gap: var(--gap-3);
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    }
+</style>

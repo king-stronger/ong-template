@@ -1,20 +1,40 @@
 <section class="partners">
-    <div class="wrapper">
-        <h2>Nos partenaires</h2>
+    <div class="wrapper flow-lg">
+        <h2 class="text-xl text-center">Nos partenaires</h2>
 
-        <ul class="partner-list">
-            <li>
-                <img src="partner1.png" alt="Partenaire 1">
-            </li>
-            <li>
-                <img src="partner2.png" alt="Partenaire 2">
-            </li>
-            <li>
-                <img src="partner3.png" alt="Partenaire 3">
-            </li>
-            <li>
-                <img src="partner4.png" alt="Partenaire 4">
-            </li>
-        </ul>
+        <div class="partners">
+            <img src="https://fakelogo.com/api/image/graphmesh.png" alt="Graphmesh"/>
+            <img src="https://fakelogo.com/api/image/dawnshift.png" alt="Dawnshift"/>
+            <img src="https://fakelogo.com/api/image/thrustline.png" alt="Thrustline"/>
+            <img src="https://fakelogo.com/api/image/chronobit.png" alt="Chronobit"/>
+            <img src="https://fakelogo.com/api/image/ironmesh.png" alt="Ironmesh"/>
+            <img src="https://fakelogo.com/api/image/sparkvolt.png" alt="Sparkvolt"/>
+            <img src="https://fakelogo.com/api/image/voltshift.png" alt="Voltshift"/>
+            <img src="https://fakelogo.com/api/image/trionex.png" alt="Trionex"/>
+            <img src="https://fakelogo.com/api/image/clearstack.png" alt="Clearstack"/>
+            <img src="https://fakelogo.com/api/image/driftcore.png" alt="Driftcore"/>
+            <img src="https://fakelogo.com/api/image/titanmind.png" alt="Titanmind"/>
+            <img src="https://fakelogo.com/api/image/zeronest.png" alt="Zeronest"/>
+        </div>
     </div>
 </section>
+
+<style>
+    .partners {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-2);
+        align-items: center;
+        justify-content: center;
+
+        max-width: 1000px;
+        margin-inline: auto;
+    }
+
+    .partners img {
+        height: 24px;
+        width: auto;
+        opacity: 0.4;
+        filter: grayscale(1);
+    }
+</style>

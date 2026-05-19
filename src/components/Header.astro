@@ -1,17 +1,115 @@
+---
+import { Icon } from "astro-icon/components"
+---
+
 <header>
     <div class="wrapper">
-        <h1>ONG</h1>
+        <h1 class="text-md">ONG</h1>
 
         <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Mission</a></li>
-                <li><a href="#">Projet</a></li>
-                <li><a href="#">Partenariat</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Faire un don</a></li>
+            <ul id="menu" class="menu">
+                <li id="close-menu-btn">
+                    <button>
+                        <Icon name="ri:close-large-fill"/>
+                    </button>
+                </li>
+                <li><a href="/" class="nav-link">Accueil</a></li>
+                <li><a href="#" class="nav-link">Mission</a></li>
+                <li><a href="#" class="nav-link">Projet</a></li>
+                <li><a href="#" class="nav-link">Partenariat</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="btn-sm btn-primary">Faire un don</a></li>
             </ul>
+            <div class="mobile-nav">
+                <a href="#" id="cta-btn" class="btn-sm btn-primary">Faire un don</a>
+                <button id="open-menu-btn">
+                    <Icon name="ri:menu-3-line" class="text-md"/>
+                </button>
+            </div>
         </nav>
     </div>
 </header>
+
+<script>
+    const menu = document.getElementById("menu")
+    const openMenuBtn = document.getElementById("open-menu-btn")
+    const closeMenuBtn = document.getElementById("close-menu-btn")
+
+    openMenuBtn?.addEventListener("click", () => {
+        menu?.setAttribute("data-show", "true")
+    })
+
+    closeMenuBtn?.addEventListener("click", () => {
+        menu?.setAttribute("data-show", "false")
+    })
+</script>
+
+<style>
+    header {
+        position: sticky;
+        inset: 0 0 auto 0;
+        z-index: 1;
+        background-color: var(--clr-white);
+        box-shadow: var(--shadow-elevation-low);
+    }
+
+    .wrapper {
+        padding-block: var(--gap-1);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-link {
+            color: var(--gray-1000);
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-1000);
+        }
+
+        @container (width > 600px) {
+            #close-menu-btn, .mobile-nav {
+                display: none;
+            }
+            
+            .menu {
+                display: flex;
+                gap: var(--gap-1);
+                align-items: center;
+            }
+        }
+
+        @container (width < 600px) {
+            #close-menu-btn, .mobile-nav {
+                display: initial;
+            }
+
+            .menu {
+                position: fixed;
+                inset: 0 0 auto 0;
+                padding-block: var(--gap-7);
+
+                display: flex;
+                gap: var(--gap-3);
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                translate: 0 -100%;
+                transition: translate 300ms;
+                background-color: var(--primary-0);
+            }
+
+            #menu[data-show="true"] {
+                translate: 0 0;
+            }
+
+            .mobile-nav {
+                display: flex;
+                gap: var(--gap-2);
+                align-items: center;
+            }
+        }
+    }
+</style>
