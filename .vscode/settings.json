@@ -1,19 +1,10 @@
 {
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore",
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Use Conventional Commits with emojis."
-    },
-    {
-      "text": "Write a short title (max 72 chars) AND a detailed body when multiple changes exist."
-    },
-    {
-      "text": "Be precise about WHAT changed and WHY. Group related changes in bullet points."
-    },
-    {
-      "text": "✨ feat, 🐛 fix, 📝 docs, 🎨 style, ♻️ refactor, ⚡ perf, ✅ test, 🔧 chore, 🚀 build, 👷 ci, 🔒 security."
-    },
-    {
-      "text": "Format: <emoji> <type>(scope): <title>. Then optional body with bullet points."
+      "text": "Use Conventional Commits with emojis: ✨ feat, 🐛 fix, 📝 docs, 🎨 style, ♻️ refactor, ⚡ perf, ✅ test, 🔧 chore, 🚀 build, 👷 ci, 🔒 security. Write a short title (≤72 chars) and, if multiple changes exist, a detailed body explaining what changed and why, grouping related changes in bullet points. Format commits as <emoji> <type>(scope): <title> and optionally add a body with bullets."
     }
   ]
 }
