@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets"
 import { StepForward } from "@lucide/astro"
 import Hero from "../assets/img/hero.png";
 import About from "../assets/img/about.png";
@@ -18,7 +17,8 @@ import Volunteer from "../assets/img/volunteer.png";
 
         <ul>
             <li class="project">
-                <Image src={Hero} alt="Projet éducatif communautaire" width="1600" height="900" />
+                <img src={Hero.src} alt="Projet éducatif communautaire"
+                    loading="lazy" decoding="async" width="1600" height="900" />
 
                 <h3>Construction d’espaces éducatifs</h3>
 
@@ -33,7 +33,8 @@ import Volunteer from "../assets/img/volunteer.png";
             </li>
 
             <li class="project">
-                <Image src={About} alt="Projet de sensibilisation communautaire" width="1600" height="900" />
+                <img src={About.src} alt="Projet de sensibilisation communautaire"
+                    loading="lazy" decoding="async" width="1600" height="900" />
 
                 <h3>Campagnes de sensibilisation</h3>
 
@@ -48,7 +49,8 @@ import Volunteer from "../assets/img/volunteer.png";
             </li>
 
             <li class="project">
-                <Image src={Volunteer} alt="Projet de développement durable" width="1600" height="900" />
+                <img src={Volunteer.src} alt="Projet de développement durable"
+                    loading="lazy" decoding="async" width="1600" height="900" />
 
                 <h3>Initiatives de développement durable</h3>
 

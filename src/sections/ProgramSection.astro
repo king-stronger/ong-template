@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets"
 import Hero from "../assets/img/hero.png";
 import About from "../assets/img/about.png";
 import Volunteer from "../assets/img/volunteer.png";
@@ -17,7 +16,8 @@ import Volunteer from "../assets/img/volunteer.png";
 
         <ul>
             <li class="program">
-                <Image src={Hero} alt="Programme d’éducation" width="1600" height="900"/>
+                <img src={Hero.src} alt="Programme d’éducation" 
+                    loading="lazy" decoding="async" width="1600" height="900"/>
 
                 <div>
                     <h3>Éducation et autonomisation</h3>
@@ -29,7 +29,8 @@ import Volunteer from "../assets/img/volunteer.png";
             </li>
 
             <li class="program">
-                <Image src={About} alt="Programme de santé communautaire" width="1600" height="900"/>
+                <img src={About.src} alt="Programme de santé communautaire" 
+                    loading="lazy" decoding="async" width="1600" height="900"/>
 
                 <div>
                     <h3>Santé et bien-être communautaire</h3>
@@ -41,7 +42,8 @@ import Volunteer from "../assets/img/volunteer.png";
             </li>
 
             <li class="program">
-                <Image src={Volunteer} alt="Programme environnemental" width="1600" height="900"/>
+                <img src={Volunteer.src} alt="Programme environnemental" 
+                    loading="lazy" decoding="async" width="1600" height="900"/>
 
                 <div>
                     <h3>Développement durable et environnement</h3>

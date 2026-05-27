@@ -1,13 +1,12 @@
 ---
-import { Image } from "astro:assets"
 import Volunteer from "../assets/img/volunteer.png";
 ---
 
 <section class="bg-blue-950" id="mission">
     <div class="wrapper">
         <div class="img-shadow-alt">
-            <Image class="rounded-2xl"
-                src={Volunteer} 
+            <img class="rounded-2xl"
+                src={Volunteer.src} loading="lazy" decoding="async"
                 alt="Actions communautaires menées par l'organisation"
             />
         </div>

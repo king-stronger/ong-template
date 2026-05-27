@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets"
 import About from "../assets/img/about.png";
 ---
 
@@ -20,8 +19,8 @@ import About from "../assets/img/about.png";
         </div>
 
         <div class="img-shadow">
-            <Image class="rounded-2xl"
-                src={About}
+            <img class="rounded-2xl"
+                src={About.src} loading="lazy" decoding="async"
                 alt="Membres de l’organisation sur le terrain"
             />
         </div>
