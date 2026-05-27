@@ -194,10 +194,6 @@
         .user {
             @apply flex items-center gap-2 mt-auto;
             
-            img {
-                @apply w-10
-            }
-
             div {
                 @apply flex flex-col gap-0;
 
