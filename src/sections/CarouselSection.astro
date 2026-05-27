@@ -1,0 +1,105 @@
+<section>
+    <div class="wrapper">
+        <ul class="carousel">
+            <li>
+                <img src="https://placehold.co/300x300?text=Gallery Image" alt="">
+            </li>
+
+            <li>
+                <img src="https://placehold.co/300x300?text=Gallery Image 2" alt="">
+            </li>
+
+            <li>
+                <img src="https://placehold.co/300x300?text=Gallery Image 3" alt="">
+            </li>
+
+            <li>
+                <img src="https://placehold.co/300x300?text=Gallery Image 4" alt="">
+            </li>
+
+            <li>
+                <img src="https://placehold.co/300x300?text=Gallery Image 5" alt="">
+            </li>
+
+            <li>
+                <img src="https://placehold.co/300x300?text=Gallery Image 6" alt="">
+            </li>
+
+            <li>
+                <img src="https://placehold.co/300x300?text=Gallery Image 7" alt="">
+            </li>
+
+            <li>
+                <img src="https://placehold.co/300x300?text=Gallery Image 8" alt="">
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    .carousel {
+        display: grid;
+        column-gap: 3rem;
+        grid-auto-flow: column;
+        grid-auto-columns: 200px;
+
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        
+        scroll-marker-group: after;
+
+        @media (prefers-reduced-motion: no-preference){
+            scroll-behavior: smooth;
+        }
+
+        &::scroll-marker-group {
+            display: flex;
+            gap: .5rem;
+            margin-top: 2rem;
+            justify-content: center;
+            
+            anchor-name: --carousel-anchor;
+        }
+
+        > li {
+            scroll-snap-align: center;
+        }
+
+        > li{
+            &::scroll-marker {
+                content: " ";
+                width: 15px;
+                height: 15px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                border: 2px solid canvasText;
+            }    
+            
+            &::scroll-marker:target-current {
+                background: LinkText;
+                border-color: LinkText;
+            }
+        }
+
+        &::scroll-button(*){
+            margin: 1rem;
+            position: fixed;
+            position-anchor: --carousel-anchor;
+        }
+     
+        &::scroll-button(left) {
+            content: "⬅" / "Scroll Left";
+            position-area: center left;
+        }
+        
+        &::scroll-button(right) {
+            content: "⮕" / "Scroll Right";
+            position-area: center right;
+        }
+
+        &::scroll-button(*):focus-visible {
+            outline-offset: 5px;
+        }
+    }
+</style>

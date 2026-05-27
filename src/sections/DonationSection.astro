@@ -1,0 +1,97 @@
+---
+import { Circle } from "@lucide/astro";
+
+---
+<section id="donation">
+    <div class="wrapper">
+        <div class="flex flex-col gap-4 md:gap-6">
+            <h2 class="text-3xl font-bold md:text-6xl">
+                Soutenir notre mission
+            </h2>
+
+            <p class="text-lg text-gray-700">
+                Votre contribution nous aide à renforcer nos actions sur le terrain et à accompagner davantage de communautés dans le besoin.
+            </p>
+
+            <div>
+                <h3 class="mb-4 text-xl font-medium">
+                    À quoi servent vos contributions ?
+                </h3>
+
+                <ul class="flex flex-col gap-6">
+                    <li class="px-4 border-l-4 border-l-emerald-600">
+                        <span class="mb-2 text-lg font-medium block">
+                            Petits dons (5 000 – 25 000 FCFA)
+                        </span>
+                        <p>
+                            Soutien aux fournitures, activités communautaires et actions de terrain.
+                        </p>
+                    </li>
+
+                    <li class="px-4 border-l-4 border-l-emerald-600">
+                        <span class="mb-2 text-lg font-medium block">
+                            Dons moyens (25 000 – 100 000 FCFA)
+                        </span>
+                        <p>
+                            Financement des programmes éducatifs, sanitaires et de sensibilisation.
+                        </p>
+                    </li>
+
+                    <li class="px-4 border-l-4 border-l-emerald-600">
+                        <span class="mb-2 text-lg font-medium block">
+                            Contributions importantes (100 000 FCFA+)
+                        </span>
+                        <p>
+                            Soutien direct aux projets communautaires et au développement durable.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-8 py-6 px-4 md:p-8 bg-indigo-950 rounded-xl">
+            <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                    Contribuer maintenant
+                </h3>
+    
+                <p class="text-blue-100">
+                    Choisissez un mode de contribution simple et sécurisé.
+                </p>
+            </div>
+            
+            <div>
+                <h3 class="text-lg md:text-xl mb-2 text-white">Par mobile money</h3>
+                <div class="flex flex-col gap-4 bg-white rounded-xl p-4 text-sm">
+                    <div>
+                        <span class="font-medium">Mobile Money :</span>
+                        <p>+223 78 78 78 78</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg md:text-xl mb-2 text-white">Par virement bancaire</h3>
+                <div class="flex flex-col gap-4 bg-white rounded-xl p-4 text-sm">
+                    <div>
+                        <span class="font-medium">Mobile Money :</span>
+                        <p>+223 78 78 78 78</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-primary mt-2">
+                Soutenir maintenant
+            </button>
+        </div>
+    </div>
+</section>
+
+<style>
+    .wrapper {
+        gap: 4rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    }
+</style>

@@ -1,0 +1,104 @@
+---
+    import { Mail } from "@lucide/astro";
+    import { Phone } from "@lucide/astro";
+    import { MapPin } from "@lucide/astro";
+---
+
+<footer class="bg-emerald-950 text-white">
+    <div class="full-wrapper flex flex-col gap-8">
+        <div class="footer-main">
+            <!-- Logo / Mission -->
+            <div class="footer-logo">
+                <h2 class="text-lg md:text-xl font-semibold mb-3">
+                    Nom de l’ONG
+                </h2>
+
+                <p class="text-sm md:text-base text-emerald-50">
+                    Une organisation engagée aux côtés des communautés pour promouvoir l’éducation, la santé et le développement durable à travers des actions concrètes et inclusives.
+                </p>
+            </div>
+
+            <!-- ONG -->
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3">Organisation</h3>
+                <div class="flex flex-col gap-3 text-sm md:text-base text-emerald-50">
+                    <a href="#about">À propos</a>
+                    <a href="#mission">Notre mission</a>
+                    <a href="#programs">Nos programmes</a>
+                    <a href="#projects">Nos projets</a>
+                    <a href="#team">Notre équipe</a>
+                </div>
+            </div>
+
+            <!-- Engagement -->
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3">S’engager</h3>
+                <div class="flex flex-col gap-3 text-sm md:text-base text-emerald-50">
+                    <a href="#donation">Faire un don</a>
+                    <a href="#contact">Devenir bénévole</a>
+                    <a href="#contact">Devenir partenaire</a>
+                    <a href="#contact">Participer à un projet</a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3">Contact</h3>
+                <div class="flex flex-col gap-3 text-sm md:text-base text-emerald-50">
+                    <a href="tel:+22378787878" class="flex items-center gap-2">
+                        <Phone />
+                        <span class="text-emerald-50">+223 78 78 78 78</span>
+                    </a>
+
+                    <a href="mailto:contact@ong.org" class="flex items-center gap-2">
+                        <Mail />
+                        <span class="text-emerald-50">contact@ong.org</span>
+                    </a>
+
+                    <address class="flex items-center gap-2 not-italic">
+                        <MapPin />
+                        <span class="text-emerald-50">Bamako, Mali</span>
+                    </address>
+                </div>
+            </div>
+
+            <!-- Légal -->
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3">Informations</h3>
+                <div class="flex flex-col gap-3 text-sm md:text-base text-emerald-50">
+                    <a href="#">Transparence</a>
+                    <a href="#">Rapports d’activité</a>
+                    <a href="#">Confidentialité</a>
+                    <a href="#">Conditions d’utilisation</a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="border-emerald-700">
+
+        <div class="flex flex-col gap-4 items-center text-center sm:flex-row sm:justify-between sm:text-left">
+            <p class="text-emerald-50">
+                © 2026 Nom de l’ONG. Tous droits réservés.
+            </p>
+
+            <div class="flex gap-4 flex-wrap">
+                <a href="#" class="text-sm text-emerald-50 font-semibold">Mentions légales</a>
+                <a href="#" class="text-sm text-emerald-50 font-semibold">Politique de confidentialité</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<style>
+    .footer-main {
+        gap: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(140px, 100%), 1fr));
+    }
+
+    .footer-logo {
+        grid-column: span 2;
+    }
+</style>

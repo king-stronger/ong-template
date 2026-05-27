@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets"
+import Hero from "../assets/img/hero.png";
+import About from "../assets/img/about.png";
+import Volunteer from "../assets/img/volunteer.png";
+---
+
+<section id="programs">
+    <div class="wrapper">
+        <h2 class="text-3xl text-center font-bold mb-4 md:mb-8 md:text-6xl">
+            Nos domaines d’intervention
+        </h2>
+
+        <p class="text-base md:text-lg text-center mb-4 md:mb-8 max-w-xl mx-auto">
+            Nous développons des programmes adaptés aux besoins des communautés afin de créer un impact durable, inclusif et concret sur le terrain.
+        </p>
+
+        <ul>
+            <li class="program">
+                <Image src={Hero} alt="Programme d’éducation"/>
+
+                <div>
+                    <h3>Éducation et autonomisation</h3>
+
+                    <p>
+                        Nous soutenons l’accès à une éducation de qualité à travers des initiatives dédiées à la formation, à l’accompagnement des jeunes et au renforcement des capacités locales.
+                    </p>
+                </div>
+            </li>
+
+            <li class="program">
+                <Image src={About} alt="Programme de santé communautaire"/>
+
+                <div>
+                    <h3>Santé et bien-être communautaire</h3>
+
+                    <p>
+                        Nos actions contribuent à améliorer l’accès aux services essentiels, à sensibiliser les populations et à promouvoir le bien-être des communautés.
+                    </p>
+                </div>
+            </li>
+
+            <li class="program">
+                <Image src={Volunteer} alt="Programme environnemental"/>
+
+                <div>
+                    <h3>Développement durable et environnement</h3>
+
+                    <p>
+                        Nous accompagnons des initiatives locales favorisant la protection de l’environnement, la résilience communautaire et un développement plus durable.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    ul {
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    }
+
+    img {
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+    }
+</style>

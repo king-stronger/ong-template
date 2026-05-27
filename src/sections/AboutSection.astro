@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets"
+import About from "../assets/img/about.png";
+---
+
+<section id="about">
+    <div class="wrapper">
+        <div class="about-content flex flex-col items-start">
+            <h2 class="text-2xl mb-4 font-bold md:text-5xl md:mb-8">
+                Une organisation engagée au service des communautés
+            </h2>
+
+            <p class="text-base md:text-lg mx-auto mb-4 md:mb-8">
+                Depuis plusieurs années, nous travaillons aux côtés des populations pour répondre aux défis sociaux, éducatifs et environnementaux à travers des initiatives concrètes et durables.  
+            </p>
+
+            <p class="text-base md:text-lg mx-auto mb-4 md:mb-8">
+                Notre approche repose sur l’écoute, la collaboration et l’action locale afin de construire des solutions adaptées aux besoins réels des communautés que nous accompagnons.
+            </p>
+        </div>
+
+        <div class="img-shadow">
+            <Image class="rounded-2xl"
+                src={About}
+                alt="Membres de l’organisation sur le terrain"
+            />
+        </div>
+    </div>
+</section>
+<style>
+    .wrapper {
+        display: grid;
+        gap: 2rem 4rem;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    }
+
+    .about-content {
+        max-width: 576px;
+
+        @container (width < 700px){
+            order: 2;
+        }
+    }
+</style>

@@ -1,0 +1,70 @@
+---
+import { Menu } from "@lucide/astro"
+import { CircleX } from "@lucide/astro"
+---
+
+<header class="bg-emerald-950 border-b border-emerald-950 shadow-md">
+    <div class="wrapper flex items-center justify-between gap-8 py-3">
+        <h1 class="text-xl text-white font-bold bg">ONG</h1>
+    
+        <nav class="flex items-center gap-4">
+            <ul class="menu flex items-center gap-8 md:gap-4 md:text-white" id="menu">
+                <button id="close-btn">
+                    <CircleX />
+                </button>
+                <li class="nav-link"><a href="#hero">Accueil</a></li>
+                <li class="nav-link"><a href="#mission">Mission</a></li>
+                <li class="nav-link"><a href="#programs">Programmes</a></li>
+                <li class="nav-link"><a href="#projects">Projets</a></li>
+                <li class="nav-link"><a href="#partners" class="text-sm btn-secondary">Devenir partenaire</a></li>
+                <li class="nav-link"><a href="#donation" class="text-sm btn-primary">Faire un don</a></li>
+            </ul>
+            <div class="mobile-actions flex items-center gap-4">
+                <a href="" class="text-sm btn-primary">Faire un don</a>
+                <Menu id="menu-btn" class="text-white"/>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const menu = document.getElementById("menu");
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
+
+    menuBtn?.addEventListener("click", () => {
+        menu?.setAttribute("data-show", "");
+    })
+
+    closeBtn?.addEventListener("click", () => {
+        menu?.removeAttribute("data-show");
+    })
+</script>
+
+<style>
+    header {
+        z-index: 1;    
+        position: sticky;
+        inset: 0 0 auto 0;
+        container-type: inline-size;
+    
+        @container (width > 700px){
+            #close-btn, .mobile-actions {
+                display: none;
+            }
+        }
+
+        @container (width < 700px){
+            .menu{
+                inset: 0 0 auto 0;
+                position: absolute;
+                translate: 0 -120%;
+                transition: translate 300ms;
+            }
+
+            .menu[data-show]{
+                translate: 0 0;
+            }
+        }
+    }
+</style>

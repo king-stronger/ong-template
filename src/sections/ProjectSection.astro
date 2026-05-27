@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets"
+import { StepForward } from "@lucide/astro"
+import Hero from "../assets/img/hero.png";
+import About from "../assets/img/about.png";
+import Volunteer from "../assets/img/volunteer.png";
+---
+
+<section class="bg-indigo-950" id="projects">
+    <div class="wrapper">
+        <h2 class="text-3xl md:text-6xl text-center font-bold mb-4 text-white">
+            Des projets concrets au service des communautés
+        </h2>
+
+        <p class="text-base md:text-lg text-center mx-auto mb-4 max-w-2xl text-white">
+            À travers des initiatives locales et des actions de terrain, nous accompagnons les communautés avec des projets durables répondant à des besoins réels.
+        </p>
+
+        <ul>
+            <li class="project">
+                <Image src={Hero} alt="Projet éducatif communautaire" />
+
+                <h3>Construction d’espaces éducatifs</h3>
+
+                <p>
+                    Mise en place d’infrastructures et de fournitures scolaires pour améliorer les conditions d’apprentissage des enfants.
+                </p>
+
+                <a href="#" class="btn-tertiary">
+                    <span>Lire plus</span>
+                    <StepForward />
+                </a>
+            </li>
+
+            <li class="project">
+                <Image src={About} alt="Projet de sensibilisation communautaire" />
+
+                <h3>Campagnes de sensibilisation</h3>
+
+                <p>
+                    Organisation d’activités communautaires autour de la santé, de l’inclusion sociale et de la protection de l’environnement.
+                </p>
+
+                <a href="#" class="btn-tertiary">
+                    <span>Lire plus</span>
+                    <StepForward />
+                </a>
+            </li>
+
+            <li class="project">
+                <Image src={Volunteer} alt="Projet de développement durable" />
+
+                <h3>Initiatives de développement durable</h3>
+
+                <p>
+                    Accompagnement de projets locaux favorisant l’autonomie, la résilience et le développement des communautés.
+                </p>
+
+                <a href="#" class="btn-tertiary">
+                    <span>Lire plus</span>
+                    <StepForward />
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    ul {
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    }
+
+    img {
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+    }
+</style>

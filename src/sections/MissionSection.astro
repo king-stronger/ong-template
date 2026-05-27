@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets"
+import Volunteer from "../assets/img/volunteer.png";
+---
+
+<section class="bg-blue-950" id="mission">
+    <div class="wrapper">
+        <div class="img-shadow-alt">
+            <Image class="rounded-2xl"
+                src={Volunteer} 
+                alt="Actions communautaires menées par l'organisation"
+            />
+        </div>
+
+        <div class="mission-content flex flex-col items-start">
+            <h2 class="text-2xl mb-4 font-bold md:text-5xl md:mb-8 text-white">
+                Agir aujourd’hui pour un changement durable
+            </h2>
+
+            <p class="text-base md:text-lg mx-auto mb-4 md:mb-8 text-white">
+                Notre mission est de renforcer les communautés à travers des programmes inclusifs, durables et accessibles à tous.  
+            </p>
+
+            <p class="text-base md:text-lg mx-auto mb-4 md:mb-8 text-white">
+                Nous croyons que chaque personne mérite l’accès à l’éducation, à la santé, aux opportunités et à un environnement sûr pour construire son avenir avec dignité.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .wrapper {
+        display: grid;
+        gap: 2rem 4rem;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    }
+
+    .mission-content {
+        max-width: 576px;
+    }
+</style>

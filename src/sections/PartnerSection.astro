@@ -1,0 +1,37 @@
+---
+    import { Image } from "astro:assets"
+---
+
+<section>
+    <div class="wrapper text-center">
+        <h2 class="text-2xl font-bold pb-4 md:text-3xl">
+            Ils nous font confiance pour créer un impact durable
+        </h2>
+
+        <p class="text-base md:text-lg max-w-2xl mx-auto mb-6 text-gray-600">
+            Nous collaborons avec des organisations, institutions et partenaires engagés pour renforcer nos actions sur le terrain et soutenir les communautés.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 py-2 md:gap-8">
+            <Image class="img" inferSize={true} src="https://fakelogo.com/api/image/skyfringe.png" alt="Skyfringe" />
+            <Image class="img" inferSize={true} src="https://fakelogo.com/api/image/vortexly.png" alt="Vortexly" />
+            <Image class="img" inferSize={true} src="https://fakelogo.com/api/image/zenithplex.png" alt="Zenithplex" />
+            <Image class="img" inferSize={true} src="https://fakelogo.com/api/image/cinderpoint.png" alt="Cinderpoint" />
+            <Image class="img" inferSize={true} src="https://fakelogo.com/api/image/velonix.png" alt="Velonix" />
+            <Image class="img" inferSize={true} src="https://fakelogo.com/api/image/quantaflow.png" alt="Quantaflow" />
+        </div>
+    </div>
+</section>
+
+<style>
+    .img {
+        width: auto;
+        height: 32px;
+        opacity: 0.4;
+        filter: grayscale(1);
+
+        @container (width < 700px){
+            height: 24px;
+        }
+    }
+</style>
