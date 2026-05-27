@@ -1,1 +1,244 @@
 @import "tailwindcss";
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    section {
+        container-type: inline-size;        
+    }
+
+    p, span {
+        @apply max-w-xl text-emerald-950
+    }   
+    
+    form {
+        @apply py-6 px-4 md:p-8 rounded-lg;
+    }
+
+    input, textarea, select {
+        @apply py-2 px-3 border border-gray-300 rounded-lg;
+
+        resize: none;
+    }
+}
+
+@layer components {
+    .wrapper {
+        @apply mx-auto w-full max-w-280 px-6 py-8 md:px-8 md:py-20;
+    }
+
+    .full-wrapper {
+        @apply mx-auto w-full max-w-350 px-6 py-8 md:px-8 md:py-20;
+    }
+
+    section {
+        @container(width > 700px){
+            .img-shadow, .img-shadow-alt {
+                position: relative;
+                isolation: isolate;
+            }
+        
+            .img-shadow::before {
+                content: "";
+                width: 50%;
+                height: 50%; 
+                z-index: -1;
+                position: absolute;
+                inset: auto 0 0 auto;
+        
+                border-radius: 1rem;
+                translate: 40px 40px;
+                
+                @apply bg-blue-100;
+            }
+        
+            .img-shadow-alt::before {
+                content: "";
+                width: 50%;
+                height: 50%; 
+                z-index: -1;
+                position: absolute;
+                inset: auto auto 0 0;
+        
+                border-radius: 1rem;
+                translate: -40px 40px;
+                
+                @apply bg-emerald-100;
+            }
+        }
+    }
+    /*********************************** HEADER ******************************************/
+    .menu {
+        @container (width < 700px){
+            @apply flex flex-col py-10 bg-blue-50 shadow-2xl;            
+        }
+    }
+
+    .nav-link:hover {
+        @apply text-blue-600;
+    }
+    /*********************************** HEADER ******************************************/
+
+    /*********************************** PROGRAM ******************************************/
+    .program {
+        @apply px-4 py-8 flex flex-col gap-4 border border-gray-200 rounded-3xl shadow-lg;
+    
+        div {
+            @apply flex flex-col gap-2
+        }
+
+        h3 {
+            @apply text-xl font-semibold;
+        }
+
+        p {
+            @apply text-sm;
+        }
+
+        img {
+            @apply rounded-2xl;
+        }
+    }
+    /*********************************** PROGRAM ******************************************/
+
+    /*********************************** PROJECTS ******************************************/
+    .project {
+        @apply p-4 flex flex-col gap-2 items-start rounded-3xl bg-white shadow-lg;
+
+        img {
+            @apply rounded-2xl;
+        }
+
+        h3 {
+            @apply text-lg font-semibold;
+        }
+
+        p {
+            @apply text-sm
+        }
+
+        .btn-tertiary {
+            @apply ml-auto mt-auto
+        }
+    }
+    /*********************************** PROJECTS ******************************************/
+
+    /*********************************** PROCESS ******************************************/
+    .process {
+        @apply py-8 flex gap-4 items-start border-t border-gray-300;
+
+        span {
+            @apply p-1 bg-gray-100;
+        }
+
+        div {
+            @apply flex flex-col gap-2;
+
+            h3 {
+                @apply text-xl font-semibold
+            }
+
+            p {
+                @apply text-base
+            }
+        }
+    }
+    /*********************************** PROCESS ******************************************/
+
+    /*********************************** STAT ******************************************/
+    .stat-wrapper {
+        @container (width > 900px){
+            @apply py-0 bg-white shadow-lg rounded-2xl -translate-y-1/2
+        }
+    }
+
+    .stat {
+        @apply flex flex-col gap-2 p-4 py-4 md:py-8 text-center;
+        position: relative;
+
+        h3 {
+            @apply text-4xl font-semibold;
+        }
+
+        p {
+            @apply text-base;
+        }
+    }
+
+    section {
+        @container (width > 900px){
+            .stat:not(:last-of-type)::after {
+                content: "";
+                width: 1px;
+                margin-block: auto;
+                position: absolute;
+                inset: 30% auto 30% 100%;
+        
+                background-color: #999;
+            }
+        }
+    }
+    /*********************************** STAT ******************************************/
+
+
+    /*********************************** TESTIMONIALS ******************************************/
+    .testimonial {
+        @apply px-6 py-4 flex flex-col gap-4 border border-gray-300 shadow-lg rounded-2xl;
+
+        p {
+            @apply text-sm italic;
+        }
+
+        .user {
+            @apply flex items-center gap-2 mt-auto;
+            
+            img {
+                @apply w-10
+            }
+
+            div {
+                @apply flex flex-col gap-0;
+
+                h4 {
+                    @apply text-base font-semibold;
+                }
+
+                span {
+                    @apply text-sm;
+                }
+            }
+        }
+    }
+    /*********************************** TESTIMONIALS ******************************************/
+
+
+    /*********************************** BUTTONS ******************************************/
+    .btn-primary {
+        @apply px-3 py-2 text-center text-white rounded-full bg-emerald-600;
+    }
+    
+    .btn-secondary {
+        @apply px-3 py-2 text-center rounded-full border text-emerald-900 border-emerald-900 bg-white;
+    }
+
+    .btn-tertiary {
+        @apply flex items-center gap-2;
+    }
+
+    :is(.btn-primary, .btn-secondary):hover {
+        @apply bg-emerald-800 text-white border-transparent
+    }
+
+    .btn-tertiary:hover {
+        * {
+            @apply text-blue-600;
+        }
+    }
+    /*********************************** BUTTONS ******************************************/
+}
+
+@layer utilities {
+
+}
